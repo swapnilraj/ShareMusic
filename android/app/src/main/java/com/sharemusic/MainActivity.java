@@ -1,6 +1,7 @@
 package com.sharemusic;
 
 import com.facebook.react.ReactActivity;
+import android.content.Intent;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +12,11 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "ShareMusic";
+  }
+
+  @Override
+  public void onNewIntent(final Intent intent) {
+      super.onNewIntent(intent);
+      setIntent(intent);
   }
 }
